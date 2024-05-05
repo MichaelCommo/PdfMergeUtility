@@ -1,10 +1,5 @@
 ﻿using PdfSharp.Pdf.IO;
 using PdfSharp.Pdf;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PdfMergeUtility
 {
@@ -45,8 +40,6 @@ namespace PdfMergeUtility
                 }
             }
 
-            //front.Delete();
-            //back.Delete();
         }
 
         private void CopyPages(PdfDocument from, PdfDocument to)

@@ -1,28 +1,7 @@
-﻿using PdfMergeUtility;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PdfMergeUtility
+﻿namespace PdfMergeUtility
 {
     class Program
     {
-        private const string frontFileExtension = ".pdff";
-        private const string backFileExtension = ".pdfb";
-        private static string[] FileExtensions = new[]
-        {
-                frontFileExtension, backFileExtension
-        };
-
-        public Program()
-        {
-            AppDomain.CurrentDomain.AssemblyResolve += new ResolveEventHandler(Utilities.AssemblyResolve);
-        }
-
         static void Main(string[] args)
         {
             FileInfo file1Info;
@@ -61,21 +40,6 @@ namespace PdfMergeUtility
             Console.WriteLine("Path and name to store the resulting file?");
             var targetFile = Console.ReadLine();
             var targetFileInfo = new FileInfo(targetFile);
-
-            //var currentDirectory = Environment.CurrentDirectory;
-            //Console.WriteLine($"Working Directory: {currentDirectory}");
-            //var files = Utilities.GetFilesInDirectoryRecursive(currentDirectory, FileExtensions);
-
-            //// group the pdfs into sets of fronts and backs
-            //foreach (var frontFile in files.Where(x => x.Extension.Equals(frontFileExtension)))
-            //{
-            //    var backFile = files.Where(x => x.Extension.Equals(backFileExtension));
-
-            //    if (backFile.Count() == 1)
-            //    {
-            //        tuplesOfPdfsToMerge.Add(new Tuple<FileInfo, FileInfo>(frontFile, backFile.Single()));
-            //    }
-            //}
 
             // merge the two pdfs
             try
