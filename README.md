@@ -3,4 +3,6 @@ Most ADF scanners don't scan double sided documents. This utility was originally
 
 # README
 To use, simply type the three file paths requested when prompted.  
-Pre-built EXE is available under releases.
+Pre-built EXE is available under [releases](https://github.com/MichaelCommo/PdfMergeUtility/releases).
+
+
